@@ -324,7 +324,7 @@
                 </div>
                 <div class="copyright">
                     <div class="container">
-                        <p class="copyright-text">© Copyright 2023. Designed By Rectify</p>
+                      <p class="copyright-text">© Copyright <span id="currentYear"></span>.</p>
                     </div>
                 </div>
             </footer>
@@ -518,5 +518,8 @@
     <script src="vendor/js/jquery.form.validate.js"></script>
     <!--// Main Js //-->
     <script src="js/main.js"></script>
+    <script>
+    document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>

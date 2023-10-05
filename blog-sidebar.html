@@ -486,7 +486,7 @@
                 </div>
                 <div class="copyright">
                     <div class="container">
-                        <p class="copyright-text">© Copyright 2020. Designed By Aip Themes</p>
+                      <p class="copyright-text">© Copyright <span id="currentYear"></span>.</p>
                     </div>
                 </div>
             </footer>
@@ -612,5 +612,8 @@
     <script src="vendor/js/jquery.form.validate.js"></script>
     <!--// Main Js //-->
     <script src="js/main.js"></script>
+    <script>
+    document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>
