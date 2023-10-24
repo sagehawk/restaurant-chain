@@ -24,12 +24,14 @@ if (isset($_POST)) {
       return $new_text;
    }
 
-   #Let's get the data from the form   
+   #Let's get the data from the form
    $contact_name     = postTextClean('contact_name');
    $contact_email    = postTextClean('contact_email');
    $contact_subject  = postTextClean('contact_subject');
-   $contact_message  = postTextClean('contact_message'); 
-   $contact_phone    = postTextClean('contact_phone'); 
+   $contact_message  = postTextClean('contact_message');
+   $contact_phone    = postTextClean('contact_phone');
+   $restaurant_location = postTextClean('restaurant_location');
+
    $mail_content     = "<div>
                            <strong>From:</strong>
                            <span>{$contact_email}</span>
@@ -47,41 +49,45 @@ if (isset($_POST)) {
                            <span>{$contact_phone}</span>
                         </div>
                         <div>
+                           <strong>Location:</strong>
+                           <span>{$restaurant_location}</span>
+                        </div>
+                        <div>
                            <strong>Message:</strong>
                            <p>".nl2br($contact_message)."</p>
                         </div>";
 
    // Hosting SMTP Settings
-   $smtp_host        = 'smtp.yoursmtphost.com';             // Enter the smtp server address you got from your hosting here
+   $smtp_host        = 'smtp.gmail.com';//'smtp.yoursmtphost.com';             // Enter the smtp server address you got from your hosting here
    $smtp_port        = 587;                                 // TCP port to connect to
-   $smtp_username    = 'yoursmtpusername@yoursite.com';                // SMTP username
-   $smtp_password    = 'yoursmtppassword';                         // SMTP password
+   $smtp_username    = 'haq.sajjad220@gmail.com';//'yoursmtpusername@yoursite.com';                // SMTP username
+   $smtp_password    = 'vebt yjom ldsm eqal'; //'yoursmtppassword';                         // SMTP password
 
    // Instantiation and passing `true` enables exceptions
    $mail = new PHPMailer(true);
 
    try {
       //Server settings
-      $mail->isSMTP();                                                 
-      $mail->SMTPAuth   = true;                        
-      $mail->Host       = $smtp_host;                     
-      $mail->Username   = $smtp_username;                   
-      $mail->Password   = $smtp_password;               
+      $mail->isSMTP();
+      $mail->SMTPAuth   = true;
+      $mail->Host       = $smtp_host;
+      $mail->Username   = $smtp_username;
+      $mail->Password   = $smtp_password;
       $mail->SMTPSecure = 'tls';
-      $mail->Port       = $smtp_port;                                    
-      $mail->CharSet    = "UTF-8";    
-      $mail->SMTPAutoTLS = false;                             
-      $mail->setFrom($smtp_username, $contact_subject);
+      $mail->Port       = $smtp_port;
+      $mail->CharSet    = "UTF-8";
+      $mail->SMTPAutoTLS = false;
+      $mail->setFrom($smtp_username, $contact_subject, $restaurant_location);
       $mail->addAddress("yourmail@example.com");            // Enter the email address you want to send here
       $mail->addReplyTo($contact_email, $contact_name);
       // Content
-      $mail->isHTML(true);                                  
+      $mail->isHTML(true);
       $mail->Subject = $contact_subject;
       $mail->Body    = $mail_content;
       $mail->AltBody = strip_tags($mail_content);
       $mail->send();
       $message       = true;
-      echo $message;   
+      echo $message;
    } catch (Exception $e) {
       $message       = false;
       echo $message;

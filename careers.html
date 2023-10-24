@@ -8,6 +8,46 @@
     <meta name="keywords" content="app,food,restaurant,template,html5,js">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pepechura - Restaurant Template</title>
+    <style>
+    .dropdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 200px;
+    text-align: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.dropdown-content label {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content label:hover {background-color: #f1f1f1}
+
+</style>
     <!--// Boostrap v4 //-->
     <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
     <!--// Magnific Popup //-->
@@ -54,57 +94,40 @@
                         <button class="reservation-btn-toggle reservation-btn-mobile" data-toggle="modal" data-target="#reservationForm"><i class="fas fa-envelope-open-text"></i></button>
                         <div class="collapse navbar-collapse main-menu justify-content-end" id="fixedNavbar">
                             <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="homeDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Home
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="homeDropdownMenu">
-                                        <a class="dropdown-item" href="index-1.html">Home Default</a>
-                                        <a class="dropdown-item" href="index-slider.html">Home Slider</a>
-                                        <a class="dropdown-item" href="index-particles.html">Home Particles</a>
-                                        <a class="dropdown-item" href="index-video.html">Home Video</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link active dropdown-toggle" href="#" id="pagesDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="pagesDropdownMenu">
-                                        <a class="dropdown-item" href="about-us.html">About Us</a>
-                                        <a class="dropdown-item" href="services.html">Services</a>
-                                        <a class="dropdown-item" href="menu.html">Menu</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="gallery.html">Gallery</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="blogDropdownMenu">
-                                        <a class="dropdown-item" href="blog-grid.html">Blog Grid</a>
-                                        <a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a>
-                                        <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
-                                </li>
-                                <li class="nav-item search-btn-resp">
-                                    <a href="#" class="search-btn-toggle nav-link" data-toggle="modal" data-target="#searchForm">
-                                        <i class=" fa fa-search"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item navbar-btn-resp d-flex align-items-center">
-                                    <a href="#" data-toggle="modal" data-target="#reservationForm" class="primary-btn">Book A Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>
+                              <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Our Company
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="pagesDropdownMenu">
+                                    <a class="dropdown-item" href="who-we-are.html">Who We Are</a>
+                                    <a class="dropdown-item" href="where-we-operate.html">Where We Operate</a>
+                                </div>
+                            </li>
+                              <li class="nav-item dropdown">
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="careers.html">Careers</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="contact.html">Contact</a>
+                              </li>
+                            <!--<li class="nav-item search-btn-resp">
+                                  <a href="#" class="search-btn-toggle nav-link" data-toggle="modal" data-target="#searchForm">
+                                      <i class=" fa fa-search"></i>
+                                  </a>
+                              </li>-->
+                              <li class="nav-item navbar-btn-resp d-flex align-items-center">
+                                  <a href="#" data-toggle="modal" data-target="#reservationForm" class="primary-btn">Submit Inquiry</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </nav>
+              </div>
+          </div>
+      </header>
         <!--// Header End  //-->
 
         <!--// Main Area Start //-->
@@ -116,13 +139,13 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="breadcrumb-inner text-center">
-                                <h1>Menu</h1>
+                                <h1>Careers</h1>
                                 <ul class="breadcrumb-links">
                                     <li>
                                         <a href="index.html">Home</a>
                                     </li>
                                     <li class="active">
-                                        Menu
+                                        Careers
                                     </li>
                                 </ul>
                             </div>
@@ -132,136 +155,131 @@
             </section>
             <!--// Breadcrumb Section end //-->
 
-            <!--// Menu Start //-->
-            <section class="section pb-minus-70">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-">
-                            <div class="section-heading">
-                                <span>Our Menu</span>
-                                <h4>Take advantage of special <br> benefits </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6">
-                            <div class="menu-gallery-filter">
-                                <a href="#" data-menu-gallery-filter="*" class="current">All</a>
-                                <a href="#" data-menu-gallery-filter=".meat-food">Meat Foods</a>
-                                <a href="#" data-menu-gallery-filter=".fish-dishes">Fish Dishes</a>
-                                <a href="#" data-menu-gallery-filter=".salad-pasta">Salad & Pasta</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" id="menu-gallery-masonry-wrap">
-                        <div class="col-md-6 col-lg-6 menu-gallery-item meat-food">
-                            <div class="menu-gallery-item-inner">
-                                <div class="item-price">
-                                    <span>$25</span>
-                                </div>
-                                <div class="gallery-details">
-                                    <h6><a href="#">Beef Brocolia</a></h6>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 menu-gallery-item meat-food">
-                            <div class="menu-gallery-item-inner">
-                                <div class="item-price">
-                                    <span>$35</span>
-                                </div>
-                                <div class="gallery-details">
-                                    <h6><a href="#">Eggplant Kebab</a></h6>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 menu-gallery-item meat-food">
-                            <div class="menu-gallery-item-inner">
-                                <div class="item-price">
-                                    <span>$35</span>
-                                </div>
-                                <div class="gallery-details">
-                                    <h6><a href="#">Iskender Kebab</a></h6>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 menu-gallery-item salad-pasta">
-                            <div class="menu-gallery-item-inner">
-                                <div class="item-price">
-                                    <span>$22</span>
-                                </div>
-                                <div class="gallery-details">
-                                    <h6><a href="#">Pasta Italian Sauce</a></h6>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 menu-gallery-item salad-pasta">
-                            <div class="menu-gallery-item-inner">
-                                <div class="item-price">
-                                    <span>$18</span>
-                                </div>
-                                <div class="gallery-details">
-                                    <h6><a href="#">Italian Tuna Pasta</a></h6>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 menu-gallery-item salad-pasta">
-                            <div class="menu-gallery-item-inner">
-                                <div class="item-price">
-                                    <span>$21</span>
-                                </div>
-                                <div class="gallery-details">
-                                    <h6><a href="#">Teriyaki Salmon</a></h6>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 menu-gallery-item fish-dishes">
-                            <div class="menu-gallery-item-inner">
-                                <div class="item-price">
-                                    <span>$25</span>
-                                </div>
-                                <div class="gallery-details">
-                                    <h6><a href="#">One Pan Fish Dinner</a></h6>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 menu-gallery-item fish-dishes">
-                            <div class="menu-gallery-item-inner">
-                                <div class="item-price">
-                                    <span>$65</span>
-                                </div>
-                                <div class="gallery-details">
-                                    <h6><a href="#">Fish in Crazy Water</a></h6>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--// Menu End //-->
+            <!--// Blog Sidebar Start //-->
+            <section class="section" id="blog-sidebar">
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-8">
+                          <div class="blog-sidebar-item-wrap">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="blog-item" style="display: flex; align-items: center; justify-content: space-between;">
+                                          <div class="blog-content"> <!-- New wrapper for everything except the button -->
+                                              <div class="blog-img">
+                                                  <a href="where-we-operate.html"></a>
+                                              </div>
+                                              <div class="blog-body">
+                                                  <div class="blog-meta">
+                                                      <span><i class="far fa-map"></i>Chicago, IL</span>
+                                                      <!--<span><i class="far fa-bookmark"></i>Pizza</span>-->
+                                                  </div>
+                                                  <div class="blog-text">
+                                                      <h6><a href="where-we-operate.html">District Manager</a></h6>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <a href="where-we-operate.html" class="blog-more-btn" style="margin-right: 25px;" >apply now</a> <!-- Moved out of the .blog-body -->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-8">
+                          <div class="blog-sidebar-item-wrap">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="blog-item" style="display: flex; align-items: center; justify-content: space-between;">
+                                          <div class="blog-content"> <!-- New wrapper for everything except the button -->
+                                              <div class="blog-img">
+                                                  <a href="where-we-operate.html"></a>
+                                              </div>
+                                              <div class="blog-body">
+                                                  <div class="blog-meta">
+                                                      <span><i class="far fa-map"></i>Chicago, IL</span>
+                                                      <!--<span><i class="far fa-bookmark"></i>Pizza</span>-->
+                                                  </div>
+                                                  <div class="blog-text">
+                                                      <h6><a href="where-we-operate.html">General Manager</a></h6>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <a href="where-we-operate.html" class="blog-more-btn" style="margin-right: 25px;" >apply now</a> <!-- Moved out of the .blog-body -->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-8">
+                          <div class="blog-sidebar-item-wrap">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="blog-item" style="display: flex; align-items: center; justify-content: space-between;">
+                                          <div class="blog-content"> <!-- New wrapper for everything except the button -->
+                                              <div class="blog-img">
+                                                  <a href="where-we-operate.html"></a>
+                                              </div>
+                                              <div class="blog-body">
+                                                  <div class="blog-meta">
+                                                      <span><i class="far fa-map"></i>Chicago, IL</span>
+                                                      <!--<span><i class="far fa-bookmark"></i>Pizza</span>-->
+                                                  </div>
+                                                  <div class="blog-text">
+                                                      <h6><a href="where-we-operate.html">Assistant Manager</a></h6>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <a href="where-we-operate.html" class="blog-more-btn" style="margin-right: 25px;" >apply now</a> <!-- Moved out of the .blog-body -->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-8">
+                          <div class="blog-sidebar-item-wrap">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="blog-item" style="display: flex; align-items: center; justify-content: space-between;">
+                                          <div class="blog-content"> <!-- New wrapper for everything except the button -->
+                                              <div class="blog-img">
+                                                  <a href="where-we-operate.html"></a>
+                                              </div>
+                                              <div class="blog-body">
+                                                  <div class="blog-meta">
+                                                      <span><i class="far fa-map"></i>Chicago, IL</span>
+                                                      <!--<span><i class="far fa-bookmark"></i>Pizza</span>-->
+                                                  </div>
+                                                  <div class="blog-text">
+                                                      <h6><a href="where-we-operate.html">Customer Service Rep</a></h6>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <a href="where-we-operate.html" class="blog-more-btn" style="margin-right: 25px;" >apply now</a> <!-- Moved out of the .blog-body -->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </section>
+
+            <!--// Blog Sidebar End //-->
 
             <!--// Footer Start //-->
             <footer class="footer">
@@ -272,7 +290,7 @@
                                 <div class="footer-widget">
                                     <h6 class="footer-title">About Us</h6>
                                     <p class="footer-desc">
-                                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here.
+                                        M&A Food Group blends culinary innovation with corporate responsibility, crafting exquisite experiences while championing sustainability and community engagement.
                                     </p>
                                     <div class="footer-social-links">
                                         <a href="#">
@@ -292,30 +310,27 @@
                             </div>
                             <div class="col-md-6 col-lg-2 footer-widget-resp">
                                 <div class="footer-widget footer-widget-pl">
-                                    <h6 class="footer-title">Usefull Links</h6>
+                                    <h6 class="footer-title">Useful Links</h6>
                                     <ul class="footer-links">
                                         <li>
-                                            <a href="#">Home</a>
+                                            <a href="#index.html">Home</a>
                                         </li>
                                         <li>
-                                            <a href="#">About</a>
+                                            <a href="#who-we-are.html">Who We Are</a>
                                         </li>
                                         <li>
-                                            <a href="#">Services</a>
+                                            <a href="#where-we-operate.html">Where We Operate</a>
                                         </li>
                                         <li>
-                                            <a href="#">Gallery</a>
+                                            <a href="#careers.html">Careers</a>
                                         </li>
                                         <li>
-                                            <a href="#">Latest News</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Blog Posts</a>
+                                            <a href="#contact.html">Contact Us</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3 footer-widget-resp">
+                            <!--<div class="col-md-6 col-lg-3 footer-widget-resp">
                                 <div class="footer-widget">
                                     <h6 class="footer-title">Helper Links</h6>
                                    <ul class="footer-links">
@@ -339,7 +354,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="col-md-6 col-lg-3 footer-widget-resp">
                                 <div class="footer-widget">
                                     <h6 class="footer-title">Contact Info</h6>
@@ -347,7 +362,7 @@
                                         <ul class="footer-contact-info-list">
                                             <li>
                                                 <i class="fa fa-map-marker"></i>
-                                                <p>8595 Marconi Rd. Phillipsburg, NJ 08865</p>
+                                                <p>205 N Michigan Ave Ste. 810 Chicago, IL 60601</p>
                                             </li>
                                             <li>
                                                 <i class="fa fa-phone"></i>
@@ -359,8 +374,8 @@
                                             <li>
                                                 <i class="fa fa-envelope"></i>
                                                 <div class="text">
-                                                    <p>pepechura@example.com</p>
-                                                    <p>pepechura@example.com</p>
+                                                    <p>HR@mafoodgroup.com</p>
+                                                    <p>Info@mafoodgroup.com</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -372,7 +387,7 @@
                 </div>
                 <div class="copyright">
                     <div class="container">
-                        <p class="copyright-text">© Copyright 2020. Designed By Aip Themes</p>
+                      <p class="copyright-text">© Copyright <span id="currentYear"></span>.</p>
                     </div>
                 </div>
             </footer>
@@ -407,7 +422,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="reservationFormLabel">Book A Table</h5>
+                            <h5 class="modal-title" id="reservationFormLabel">Connect With Us</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -415,35 +430,31 @@
                         <div class="modal-body">
                             <form action="index.html" method="POST">
                                 <div class="popup-form-group">
-                                    <input type="text" class="popup-form-control" autocomplete="off" name="reservation_name" required placeholder="Your Name *">
+                                    <input type="text" class="popup-form-control" autocomplete="on" name="reservation_name" required placeholder="Your Name *">
                                     <span class="fas fa-user"></span>
                                 </div>
                                 <div class="popup-form-group">
-                                    <input type="email" class="popup-form-control" autocomplete="off" name="reservation_email" required placeholder="Your Email *">
+                                    <input type="email" class="popup-form-control" autocomplete="on" name="reservation_email" required placeholder="Your Email *">
                                     <span class="fas fa-envelope"></span>
                                 </div>
                                 <div class="popup-form-group">
-                                    <input type="email" class="popup-form-control" autocomplete="off" name="reservation_phone" required placeholder="Your Phone *">
+                                    <input type="email" class="popup-form-control" autocomplete="on" name="reservation_phone" required placeholder="Your Phone *">
                                     <span class="fa fa-mobile"></span>
                                 </div>
                                 <div class="popup-form-group">
-                                    <input type="text" class="popup-form-control" autocomplete="off" name="reservation_person" required placeholder="Number Of Quests *">
-                                    <span class="fa fa-users"></span>
-                                </div>
-                                <div class="popup-form-group">
-                                    <input type="time" class="popup-form-control" autocomplete="off" name="reservation_time">
-                                    <span class="fa fa-clock"></span>
+                                    <input type="text" class="popup-form-control" autocomplete="off" name="reservation_location" required placeholder="Resturant Location *">
+                                    <span class="fas fa-map"></span>
                                 </div>
                                 <div class="popup-form-group">
                                     <input type="date" class="popup-form-control" autocomplete="off" name="reservation_date">
                                     <span class="fa fa-calendar"></span>
                                 </div>
                                 <div class="popup-form-group">
-                                    <textarea name="reservation_special_request" id="reservationRequest" cols="30" rows="5" class="popup-form-control" required placeholder="Special Request *"></textarea>
+                                    <textarea name="reservation_special_request" id="reservationRequest" cols="30" rows="5" class="popup-form-control" required placeholder="Your Message *"></textarea>
                                     <span class="fa fa-envelope-open-text"></span>
                                 </div>
                                 <div class="popup-form-btn">
-                                    <button type="submit" class="primary-btn">Book A Table</button>
+                                    <button type="submit" class="primary-btn">Submit Inquiry</button>
                                 </div>
                             </form>
                         </div>
@@ -498,5 +509,35 @@
     <script src="vendor/js/jquery.form.validate.js"></script>
     <!--// Main Js //-->
     <script src="js/main.js"></script>
+    <script>
+    document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script>
+    document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            // Handle checkbox change
+            console.log(this.value, this.checked);
+        });
+    });
+</script>
+<script>
+    document.getElementById('dropdownBtn').addEventListener('click', function() {
+        document.getElementById('dropdownContent').classList.toggle('show');
+    });
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown-btn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
